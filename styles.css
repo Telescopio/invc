@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url(https://static.vecteezy.com/system/resources/previews/002/563/538/original/graduation-class-poster-with-graduation-cap-and-confetti-free-vector.jpg) no-repeat center center fixed;
+    font-family: DM Serif Text, sans-serif;
+    margin: 0;
+}
+
+.contenedor {
+    position: relative;
+}
+
+.superior {
+    position: absolute;
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-top: 120px solid #dbcf8f;
+    border-bottom: 120px solid transparent;
+
+    transition: transform .75s;
+    transform-origin: top;
+}
+
+.mensaje {
+    position: absolute;
+    padding: 1.5rem;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 22px;
+    background: #eae2b7;
+    width: 360px;
+    height: 240px;
+    z-index: -1;
+    transition: transform 0.75s ease-in-out;
+}
+
+.mensaje:before {
+    content: "";
+    border-style: dotted;
+    position: absolute;
+    top: 12px;
+    left: 12px; 
+    right: 12px; 
+    bottom: 55px; 
+}
+
+.mensaje p{
+    position: relative;
+    top: -10px;
+    font-size: 1.2rem;
+}
+
+.carta {
+    border-left: 180px solid #c5ba7d;
+    border-right: 180px solid #aca164;
+    border-top: 120px solid transparent;
+    border-bottom: 120px solid #dbcf8f;
+}
+
+.bx {
+    position: absolute;
+    top: 100px;
+    right: 160px;
+    width: 40px;
+    height: 40px;
+    background-color: #740000;
+    border-radius: 50%; /* Esto hace el círculo */
+    
+}
+
+.psorpresa {
+    margin-top: -10px;
+}
+
+.botones {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boton {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6670ff, #140974);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton:hover {
+    background-position: 100% 100%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.abrir-superior {
+    transform: rotateX(180deg);
+}
+
+.abrir-mensaje {
+    transform: translateY(-100px);
+}
+
+.bx-rotada {
+    color: #740000;
+    animation: none; 
+}
+
+  
+@keyframes palpitar {
+    0% {
+      transform: scale(1.07); /* Tamaño original */
+    }
+    80% {
+      transform: scale(1.0); /* Aumentar el tamaño un poco */
+    }
+    100% {
+      transform: scale(1.08); /* Regresar al tamaño original */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mensaje:before {
+        content: "";
+        border-style: dotted;
+        position: absolute;
+        top: 12px;
+        left: 12px; 
+        right: 12px; 
+        bottom: 45px; 
+    }
+    
+    .mensaje p{
+        position: relative;
+        top: -15px;
+        font-size: 1rem;
+    }
+}
